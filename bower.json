@@ -1,7 +1,7 @@
 {
-  "name": "angular-marked-filter",
+  "name": "ng-marked",
   "version": "0.0.1",
-  "main": "markdown.js",
+  "main": "src/ng-marked.js",
   "keywords": [
     "angular",
     "markdown",
