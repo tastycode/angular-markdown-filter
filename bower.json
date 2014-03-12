@@ -1,16 +1,19 @@
 {
-  "name": "angular-markdown-filter",
+  "name": "angular-marked-filter",
   "version": "0.0.1",
   "main": "markdown.js",
   "keywords": [
     "angular",
     "markdown",
     "filter",
-    "showdown"
+    "marked"
   ],
   "license": "MIT",
   "dependencies": {
     "angular": "~1.0.5",
-    "showdown": "~0.3.1"
+    "marked": "tastycode/marked"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.2.14"
   }
 }
