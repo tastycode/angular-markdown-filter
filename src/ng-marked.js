@@ -31,5 +31,3 @@ angular.module('ngMarked', [])
       }
     };
   }]);
-
-  console.log('even including anything');
