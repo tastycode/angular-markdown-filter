@@ -1,16 +1,40 @@
-angular-markdown-filter
+ng-marked
 =======================
 
 Markdown filter for Angular
 
-1. `bower install angular-markdown-filter`
-2. Made sure the showdown lib is loaded. It should be installed as a dependency at `bower_components/showdown/compressed/showdown.js`.
-3. Include the `markdown.js` script provided by this component into your app.4. 
-4. Add `markdown` as a module dependency to your app.
-5. Insert code in view:
+1. `bower install tastycode/ng-marked`
+2. Add `ngMarked` as a module dependency to your app.
 
-        <div class="container">{{ info | markdown }}</div>
+# Using
+## Filter
 
-6. Insert code in controller:
+```html
+<div class="container">{{ info | marked }}</div>
+```
 
-        $scope.info = '# Heading 1';
+## Directive
+
+```html
+<marked>##Awesome</marked>
+```
+
+## Binding
+
+
+```html
+<div marked="somethingInScope"></div>
+```
+
+# Configuring
+
+```javascript
+  angular.module('myApp')
+    .config(function(marked) {
+      marked.setOptions(/*...*/);
+    });
+``
+
+# What/Why?
+
+I tried out Hypercube/angular-markdown and vpegado/angular-markdown-filter. I wanted to use marked, and liked Hypercube's way of allowing the markdown processor to be configured. I couldn't get it to work though, and ended up building it from scratch to figure out why. The directive now listens to changes in scope, and has the filter from vepgado. I also pointed the dependency on marked to my own repo where I have fixed the problem forcing people to manually include the markdown lib.
