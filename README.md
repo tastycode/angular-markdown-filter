@@ -33,7 +33,7 @@ Markdown filter for Angular
     .config(function(marked) {
       marked.setOptions(/*...*/);
     });
-``
+```
 
 # What/Why?
 
